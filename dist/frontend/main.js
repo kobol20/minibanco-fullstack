@@ -350,6 +350,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _models_cuenta__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../models/cuenta */ "./src/app/models/cuenta.ts");
 /* harmony import */ var _services_transfer_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/transfer.service */ "./src/app/services/transfer.service.ts");
 /* harmony import */ var _models_transfer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../models/transfer */ "./src/app/models/transfer.ts");
+/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! sweetalert */ "./node_modules/sweetalert/dist/sweetalert.min.js");
+/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(sweetalert__WEBPACK_IMPORTED_MODULE_6__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -359,6 +361,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -391,7 +394,7 @@ var CargaComponent = /** @class */ (function () {
                 transfer.monto = _this.cuentaservice.selectedCuenta.monto;
                 transfer.rut = _this.cuentaservice.selectedCuenta.rut;
                 transfer.tipo = 'Carga';
-                alert('Carga Realizada');
+                sweetalert__WEBPACK_IMPORTED_MODULE_6___default()("Carga Realizada");
                 _this.transferservice.createTransfer(transfer).subscribe(function (res) {
                     console.log('transferencia registrada', transfer);
                 });
@@ -439,7 +442,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form class=\"login100-form validate-form flex-sb flex-w\">\n\n    <span class=\"login100-form-title p-b-51\">\n      Dashboard\n  </span>\n    <div>\n        <div>\n            <a (click)=\"carga()\" class=\"txt1\">\n                Carga Saldo\n            </a>\n        </div>\n\n        <div>\n            <a (click)=\"retiro()\" class=\"txt1\">\n                Retira Saldo\n            </a>\n        </div>\n        <div>\n            <a (click)=\"terceros()\" class=\"txt1\">\n                Transferencia a otras cuentas\n            </a>\n        </div>\n        <div>\n            <a (click)=\"transferencias()\" class=\"txt1\">\n                Listado Transferencias\n            </a>\n        </div>\n        <div>\n            <a routerLink=\"home\" class=\"txt1\">\n                Home\n            </a>\n        </div>\n    </div>\n\n\n</form>"
+module.exports = "<form class=\"login100-form validate-form flex-sb flex-w\">\n\n    <span class=\"login100-form-title p-b-51\">\n      Dashboard\n  </span>\n    <div>\n        <div class=\"btn-group-vertical\">\n            <a (click)=\"carga()\" class=\"btn btn-secondary\">\n                Carga Saldo\n            </a>\n        </div>\n\n        <div>\n            <a (click)=\"retiro()\" class=\"btn btn-secondary\">\n                Retira Saldo\n            </a>\n        </div>\n        <div>\n            <a (click)=\"terceros()\" class=\"btn btn-secondary\">\n                Transferencia a otras cuentas\n            </a>\n        </div>\n        <div>\n            <a (click)=\"transferencias()\" class=\"btn btn-secondary\">\n                Listado Transferencias\n            </a>\n        </div>\n        <div>\n            <a routerLink=\"home\" class=\"btn btn-secondary\">\n                Home\n            </a>\n        </div>\n    </div>\n\n\n</form>"
 
 /***/ }),
 
@@ -523,7 +526,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form class=\"login100-form validate-form flex-sb flex-w\">\n\n    <span class=\"login100-form-title p-b-51\">\n      HOME\n  </span>\n    <div>\n        <div>\n            <a routerLink=\"/login\" class=\"txt1\">\n                Login\n            </a>\n        </div>\n\n        <div>\n            <a routerLink=\"/registro\" class=\"txt1\">\n                Registro\n            </a>\n        </div>\n    </div>\n\n</form>"
+module.exports = "<form class=\"login100-form validate-form flex-sb flex-w\">\n\n    <span class=\"login100-form-title p-b-51\">\n      HOME\n  </span>\n    <div>\n        <div class=\"col-md-5\">\n            <a routerLink=\"/login\" class=\"btn btn-primary\">\n                Login\n            </a>\n            <a routerLink=\"/registro\" class=\"btn btn-primary\">\n                Registro\n            </a>\n        </div>\n    </div>\n\n</form>"
 
 /***/ }),
 
@@ -604,6 +607,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/user.service */ "./src/app/services/user.service.ts");
 /* harmony import */ var _models_user__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../models/user */ "./src/app/models/user.ts");
+/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! sweetalert */ "./node_modules/sweetalert/dist/sweetalert.min.js");
+/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(sweetalert__WEBPACK_IMPORTED_MODULE_4__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -617,10 +622,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var LoginComponent = /** @class */ (function () {
     function LoginComponent(userservice, router) {
         this.userservice = userservice;
         this.router = router;
+        this.titularAlerta = '';
     }
     LoginComponent.prototype.ngOnInit = function () {
         this.userservice.selectedUser = new _models_user__WEBPACK_IMPORTED_MODULE_3__["User"]();
@@ -636,7 +643,7 @@ var LoginComponent = /** @class */ (function () {
             }
             else {
                 console.log('Login incorrecto');
-                alert('Usuario no existe');
+                sweetalert__WEBPACK_IMPORTED_MODULE_4___default()("Usuario no existe");
             }
         });
     };
@@ -736,7 +743,6 @@ var RegistroComponent = /** @class */ (function () {
             if (null != user && user.rut === form.value.rut) {
                 console.log('Usuario ya existe');
                 form.value.yaexiste = true;
-                console.log(form);
             }
             else {
                 var nuevoUsuario = new _models_user__WEBPACK_IMPORTED_MODULE_4__["User"]();
@@ -864,6 +870,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _models_cuenta__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../models/cuenta */ "./src/app/models/cuenta.ts");
 /* harmony import */ var _models_transfer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../models/transfer */ "./src/app/models/transfer.ts");
 /* harmony import */ var _services_transfer_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../services/transfer.service */ "./src/app/services/transfer.service.ts");
+/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! sweetalert */ "./node_modules/sweetalert/dist/sweetalert.min.js");
+/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(sweetalert__WEBPACK_IMPORTED_MODULE_6__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -873,6 +881,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -908,10 +917,10 @@ var RetiroComponent = /** @class */ (function () {
                         console.log('transferencia registrada', transfer);
                     });
                 });
-                alert('Retiro realizado');
+                sweetalert__WEBPACK_IMPORTED_MODULE_6___default()("Retiro realizado");
             }
             else {
-                alert('Saldo insuficiente');
+                sweetalert__WEBPACK_IMPORTED_MODULE_6___default()("Saldo insuficiente");
             }
         });
     };
@@ -976,6 +985,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _models_cuenta__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../models/cuenta */ "./src/app/models/cuenta.ts");
 /* harmony import */ var _services_transfer_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/transfer.service */ "./src/app/services/transfer.service.ts");
 /* harmony import */ var _models_transfer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../models/transfer */ "./src/app/models/transfer.ts");
+/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! sweetalert */ "./node_modules/sweetalert/dist/sweetalert.min.js");
+/* harmony import */ var sweetalert__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(sweetalert__WEBPACK_IMPORTED_MODULE_6__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -985,6 +996,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -1017,14 +1029,14 @@ var TercerosComponent = /** @class */ (function () {
                     transfer.monto = _this.cuentaservice.selectedCuenta.monto;
                     transfer.rut = _this.cuentaservice.selectedCuenta.rut;
                     transfer.tipo = 'transferencia';
-                    alert('transferencia realizada');
+                    sweetalert__WEBPACK_IMPORTED_MODULE_6___default()("Transferencia realizada!");
                     _this.transferservice.createTransfer(transfer).subscribe(function (res) {
                         console.log('transferencia registrada');
                     });
                 });
             }
             else {
-                alert('cuenta no existe');
+                sweetalert__WEBPACK_IMPORTED_MODULE_6___default()("Cuenta no existe");
             }
         });
         console.log('fin carga');
