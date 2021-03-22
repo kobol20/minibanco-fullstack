@@ -7,6 +7,8 @@ import { Cuenta } from "../../models/cuenta";
 import { TransferService } from '../../services/transfer.service';
 import { Transferencia } from '../../models/transfer';
 
+import swal from 'sweetalert';
+
 @Component({
   selector: 'app-terceros',
   templateUrl: './terceros.component.html',
@@ -39,13 +41,13 @@ export class TercerosComponent implements OnInit {
             transfer.monto = this.cuentaservice.selectedCuenta.monto ;
             transfer.rut = this.cuentaservice.selectedCuenta.rut;
             transfer.tipo = 'transferencia';
-            alert('transferencia realizada');
+            swal("Transferencia realizada!");
             this.transferservice.createTransfer(transfer).subscribe((res) =>{
               console.log('transferencia registrada');
             });
           });
       }else{
-        alert('cuenta no existe');
+        swal("Cuenta no existe");
       }
     });
     console.log('fin carga');

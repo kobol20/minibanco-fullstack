@@ -5,6 +5,8 @@ import { UserService } from "../../services/user.service";
 import { NgForm } from "@angular/forms";
 import { User } from "../../models/user";
 
+import swal from 'sweetalert';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,7 +14,7 @@ import { User } from "../../models/user";
   providers: [UserService],
 })
 export class LoginComponent implements OnInit {
-
+  titularAlerta:string = '';
   constructor(private userservice: UserService,
     private router: Router) {}
 
@@ -29,7 +31,8 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/dashboard/'+user.rut]);
       }else{
         console.log('Login incorrecto');
-        alert('Usuario no existe');
+        swal("Usuario no existe");
+
       }
     });
   }

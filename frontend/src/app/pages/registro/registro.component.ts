@@ -40,7 +40,6 @@ export class RegistroComponent implements OnInit {
       if(null != user && user.rut === form.value.rut ){
         console.log('Usuario ya existe');
         form.value.yaexiste = true;
-        console.log(form);
       }else{
         var nuevoUsuario = new User();
         nuevoUsuario.correo = form.value.correo;

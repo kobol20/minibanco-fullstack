@@ -7,6 +7,8 @@ import { Cuenta } from "../../models/cuenta";
 import { Transferencia } from '../../models/transfer';
 import { TransferService } from '../../services/transfer.service';
 
+import swal from 'sweetalert';
+
 @Component({
   selector: 'app-retiro',
   templateUrl: './retiro.component.html',
@@ -42,9 +44,9 @@ export class RetiroComponent implements OnInit {
             console.log('transferencia registrada',transfer);
           });
         });
-        alert('Retiro realizado');
+        swal("Retiro realizado");
       }else{
-        alert('Saldo insuficiente');
+        swal("Saldo insuficiente");
       }
     });
   }

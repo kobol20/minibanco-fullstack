@@ -7,6 +7,8 @@ import { Cuenta } from "../../models/cuenta";
 import { TransferService } from '../../services/transfer.service';
 import { Transferencia } from '../../models/transfer';
 
+import swal from 'sweetalert';
+
 @Component({
   selector: 'app-carga',
   templateUrl: './carga.component.html',
@@ -40,7 +42,7 @@ export class CargaComponent implements OnInit {
         transfer.monto = this.cuentaservice.selectedCuenta.monto ;
         transfer.rut = this.cuentaservice.selectedCuenta.rut;
         transfer.tipo = 'Carga';
-        alert('Carga Realizada');
+        swal("Carga Realizada");
         this.transferservice.createTransfer(transfer).subscribe((res) =>{
           console.log('transferencia registrada',transfer);
         });
