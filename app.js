@@ -13,7 +13,7 @@ app.set("port", process.env.PORT || 3000);
 app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
-app.use(express.static(__dirname + '/public')); // Provide static directory for frontend
+app.use(express.static(__dirname + '/dist/frontend')); // Provide static directory for frontend
 
 // Routes
 app.use("/api/users", require("./routes/user.routes"));
