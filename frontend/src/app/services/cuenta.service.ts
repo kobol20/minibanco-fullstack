@@ -9,7 +9,7 @@ import { Cuenta } from "../models/cuenta";
 export class CuentaService {
   selectedCuenta: Cuenta;
 
-  readonly URL_API = "http://localhost:3000/api/cuenta";
+  readonly URL_API = "/api/cuenta";
 
   constructor(private http: HttpClient) {
     this.selectedCuenta = new Cuenta();

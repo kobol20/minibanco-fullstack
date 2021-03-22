@@ -9,7 +9,7 @@ import { Transferencia } from "../models/transfer";
 export class TransferService {
   selectedTransfer: Transferencia;
   transferencias: Transferencia[];
-  readonly URL_API = "http://localhost:3000/api/transfer";
+  readonly URL_API = "/api/transfer";
 
   constructor(private http: HttpClient) {
     this.selectedTransfer = new Transferencia();
