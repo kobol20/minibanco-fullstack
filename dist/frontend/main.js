@@ -1177,7 +1177,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var CuentaService = /** @class */ (function () {
     function CuentaService(http) {
         this.http = http;
-        this.URL_API = "http://localhost:3000/api/cuenta";
+        this.URL_API = "/api/cuenta";
         this.selectedCuenta = new _models_cuenta__WEBPACK_IMPORTED_MODULE_2__["Cuenta"]();
     }
     CuentaService.prototype.postCuenta = function (cuenta) {
@@ -1230,7 +1230,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var TransferService = /** @class */ (function () {
     function TransferService(http) {
         this.http = http;
-        this.URL_API = "http://localhost:3000/api/transfer";
+        this.URL_API = "/api/transfer";
         this.selectedTransfer = new _models_transfer__WEBPACK_IMPORTED_MODULE_2__["Transferencia"]();
     }
     TransferService.prototype.createTransfer = function (transfer) {
@@ -1280,7 +1280,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var UserService = /** @class */ (function () {
     function UserService(http) {
         this.http = http;
-        this.URL_API = "http://localhost:3000/api/users";
+        this.URL_API = "/api/users";
         this.selectedUser = new _models_user__WEBPACK_IMPORTED_MODULE_2__["User"]();
     }
     UserService.prototype.postUser = function (user) {
